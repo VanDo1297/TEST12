@@ -1,77 +1,53 @@
-
-
-.form {
-  width: 50%;
+ul {
   position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+ul li {
+  list-style: none;
+  line-height: 50px;
+  margin: 0 5px;
+}
+ul li a,
+ul li div {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-weight: 600;
+  border-radius: 50%;
+  cursor: pointer;
+}
+ul li a:hover,
+ul li div:hover {
+  background: #333;
+  color: #fff;
+}
+ul li:first-child {
+  width: 50px;
   height: 50px;
-  overflow: hidden;
-  background: transparent;
-}
-
-.form input {
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  color: #001;
-  border: none;
-  outline: none;
-}
-
-.form input:focus + .label-name-input .content-label-name {
-  -webkit-transform: translateY(-150%);
-          transform: translateY(-150%);
-  color: red;
+  font-weight: 700px;
   font-size: 14px;
+  text-align: center;
 }
-
-.form input:focus + .label-name-input::after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.form input:valid + .label-name-input .content-label-name {
-  -webkit-transform: translateY(-150%);
-          transform: translateY(-150%);
-  color: red;
+ul li:last-child {
+  width: 50px;
+  height: 50px;
+  font-weight: 700px;
   font-size: 14px;
+  text-align: center;
 }
-
-.form input:valid + .label-name-input::after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+ul .pageNumber {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
-
-.form label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid black;
+ul .active {
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
 }
-
-.form label::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 3px solid red;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.content-label-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-
