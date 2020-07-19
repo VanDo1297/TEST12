@@ -10,7 +10,7 @@ const App = () => {
   const pageOfTable = Math.ceil(data.length / itemPerPages);
 
   useEffect(() => {
-    setRows(renderRow());
+    setRows(calcRows());
   }, [pageIndex]);
 
   const handleNext = () => {
@@ -27,14 +27,13 @@ const App = () => {
     return;
   };
 
-  const renderRow = () => {
+  const calcRows = () => {
     const start = (pageIndex - 1) * itemPerPages;
     const end = itemPerPages * pageIndex; //
     const newArray = data.slice(start, end);
     return newArray;
   };
   const renderTable = () => {
-    renderRow();
     return (
       <table class="table">
         <thead class="thead-light">
